@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cybersecurity Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button id="themeBtn">🌙</button>
+  </div>
+
+  <div class="container">
+    <!-- Home screen -->
+    <div id="home">
+      <h1>Cybersecurity Quiz</h1>
+      <p>🎯 Learn. Play. Stay Secure!!</p>
+      
+      <input type="text" id="userName" placeholder="Enter your name">
+
+      <select id="categorySelect">
+        <option value="">-- Choose Category --</option>
+        <option value="networking">Networking</option>
+        <option value="cyberlaws">Cyber Laws</option>
+        <option value="general">Basics</option>
+      </select>
+
+      <select id="levelSelect">
+        <option value="">-- Choose Difficulty --</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <br><br>
+      <button onclick="startSelectedQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz screen -->
+    <div id="quiz" class="hidden">
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <button id="nextBtn" onclick="nextQuestion()">Next</button>
+      <p id="timer">Time: 0:00</p>
+    </div>
+
+    <!-- Result screen -->
+    <div id="result" class="hidden">
+      <h2>Your Score</h2>
+      <p id="score"></p>
+      <p id="message"></p>
+      <p id="personalNote"></p>
+      <button onclick="goHome()">Go Home</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
